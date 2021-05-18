@@ -21,7 +21,7 @@ jobs:
     - name: Restore decp
       run: nuget restore TrueCraft.sln
     - name: Build
-      run: msbuild TrueCraft.sln
+      run: xbuild
     - name: Publish Windows x86
       run: dotnet publish TrueCraft -c Release -r win-x86 --self-contained false -p:PublishSingleFile=true --output win_x86
     - name: Publish Windows x64
