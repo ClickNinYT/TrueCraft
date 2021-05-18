@@ -17,7 +17,7 @@ jobs:
     - name: Setup NuGet.exe for use with actions
       uses: NuGet/setup-nuget@v1.0.5
     - name: Restore decp
-      run: mono nuget restore TrueCraft.sln
+      run: nuget restore TrueCraft.sln
     - name: Build
       run: dotnet build TrueCraft --no-restore
     - name: Publish Windows x86
